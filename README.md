@@ -1,2 +1,2 @@
 # PixelHero2D
-Prototipo de un juego 2D estilo PixelArt - Master Class de MasterDevs
+Prototipo de juego 2D gráficos PixelArt en Unity - Master Class de MasterDevs
