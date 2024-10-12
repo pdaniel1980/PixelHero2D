@@ -32,6 +32,15 @@
     <li>Bombs</li>
   </u>
 </p>
-<h2>Gameplay Preview</h2>
-![pixelHero2d_jump_double_jump](https://github.com/user-attachments/assets/394df023-1410-4193-8e36-7ba7655c9f8b)
-
+<h1>Gameplay Preview</h1>
+<h2>Jump and double jump</h2>
+<p><img src="https://github.com/user-attachments/assets/9f296b74-ba8b-462d-81e1-9e7a3070a53a" width="50%" /></p>
+<h2>Ball mode, bombs and box explosions</h2>
+<p><img src="https://github.com/user-attachments/assets/749a1156-5a95-4b24-8fa8-673dbe88c62a" width="50%" /></p>
+<h2>Dash mode</h2>
+<p><img src="https://github.com/user-attachments/assets/b3742fa7-bdb1-4b2c-b29d-ae18c0cca652" width="50%" /></p>
+<h2>Hearts and coins pickups</h2>
+<p><img src="https://github.com/user-attachments/assets/eca8616c-31e2-4163-852a-f726a931c6c9" width="50%" /></p>
+<p><img src="https://github.com/user-attachments/assets/8bdc8017-0822-484b-ba6e-e493deb364f2" width="50%" /></p>
+<h2>Arrows</h2>
+<p><img src="https://github.com/user-attachments/assets/07bd193d-ec4a-4040-a4ae-a0b45e0debac" width="50%" /></p>
