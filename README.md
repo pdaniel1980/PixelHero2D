@@ -1,7 +1,7 @@
 <h1>PixelHero2D</h1>
 <h2>About the Project</h2>
 <h3>Prototype a 2D video game to learn the game mechanics, such as controlling the player, implementing animations, collecting items, activating skills, and other features to create a playable prototype.</h3>
-<p>This project was made in Unity 2022.2.3f1 LTS</p>
+<h3>This project was made in Unity 2022.2.3f1 LTS</h3>
 <h2><b>Animations</b></h2>
 <p>
   <u>
