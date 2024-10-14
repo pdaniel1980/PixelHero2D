@@ -65667,6 +65667,7 @@ Transform:
   - {fileID: 275064898}
   - {fileID: 1488273666}
   - {fileID: 1616957270}
+  - {fileID: 1695478217}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -67746,6 +67747,7 @@ GameObject:
   - component: {fileID: 990248215}
   - component: {fileID: 990248217}
   - component: {fileID: 990248218}
+  - component: {fileID: 990248219}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -67788,7 +67790,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 990248214}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.4, z: 0}
+  m_LocalPosition: {x: 0, y: -3.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -67851,6 +67853,25 @@ MonoBehaviour:
   _canDash: 0
   _canEnterBallMode: 0
   _canDropBomb: 0
+--- !u!114 &990248219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990248214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5671ff9025295df4f82d5ec1651ce788, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsShining: 0
+  coinsSpining: 0
+  hearts: 0
+  playerDirection: {x: 0, y: 0, z: 0}
+  playerStartPosition: {x: 0, y: 0, z: 0}
+  playerLastPosition: {x: 0, y: 0, z: 0}
+  itemsCollected: []
 --- !u!1001 &997633182
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68954,7 +68975,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 18053643
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 56152d9a768664a48b81ba8f836a5525, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -73101,6 +73122,51 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52d2015e38ef74da580bca05c9944732, type: 3}
+--- !u!1 &1695478216
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1695478217}
+  - component: {fileID: 1695478218}
+  m_Layer: 0
+  m_Name: SaveGameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1695478217
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695478216}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 667027920}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1695478218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695478216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65b54a83d1de6db4c81f3c68b94120b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPrefs: {fileID: 0}
 --- !u!1001 &1703681921
 PrefabInstance:
   m_ObjectHideFlags: 0

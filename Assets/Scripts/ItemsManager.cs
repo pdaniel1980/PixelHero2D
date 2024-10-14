@@ -11,9 +11,9 @@ namespace PixelHero2D
 
         private int _heartCounter, _coinShiningCounter, _coinSpinningCounter;
 
-        public int HeartCounter { get => _heartCounter; }
-        public int CoinShiningCounter { get => _coinShiningCounter; }
-        public int CoinSpinningCounter { get => _coinSpinningCounter; }
+        public int HeartCounter { get => _heartCounter; set => _heartCounter = value; }
+        public int CoinShiningCounter { get => _coinShiningCounter; set => _coinShiningCounter = value;  }
+        public int CoinSpinningCounter { get => _coinSpinningCounter; set => _coinSpinningCounter = value; }
 
         [Header("Extras Settings")]
         [SerializeField] private int coinShiningRequire = 10;
@@ -48,7 +48,7 @@ namespace PixelHero2D
             UnlockExtras();
         }
 
-        private void UnlockExtras()
+        public void UnlockExtras()
         {
             if (HeartCounter == heartRequire)
             {

@@ -8,6 +8,8 @@ namespace PixelHero2D
 {
     public class PlayerController : MonoBehaviour
     {
+        public static PlayerController instance;
+
         // Player Sprites
         private GameObject standingPlayer;
         private GameObject ballPlayer;
@@ -62,13 +64,20 @@ namespace PixelHero2D
         private PlayerExtrasTracker playerExtrasTracker;
 
         public bool IsClimbingAllowed { get => _isClimbingAllowed; set => _isClimbingAllowed = value; }
+       
+        // Player Preferences
+        private PlayerPrefs playerPrefs;
 
+        public PlayerPrefs PlayerPrefs { get => playerPrefs; set => playerPrefs = value; }
 
         private void Awake()
         {
+            instance = this;
+            playerPrefs = GetComponent<PlayerPrefs>();
             playerRB = GetComponent<Rigidbody2D>();
             transformPlayer = GetComponent<Transform>();
             playerExtrasTracker = GetComponent<PlayerExtrasTracker>();
+            playerPrefs.PlayerStartPosition = transformPlayer.position;
         }
 
         private void Start()

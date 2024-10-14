@@ -129,6 +129,7 @@ namespace PixelHero2D
 
         public void DestroyEnemy(Collider2D other)
         {
+            PlayerController.instance.PlayerPrefs.EnemiesKilled.Add(other.transform.parent.name);
             Instantiate(enemyImpact, other.transform.position, Quaternion.identity);
             Destroy(other.gameObject);
         }

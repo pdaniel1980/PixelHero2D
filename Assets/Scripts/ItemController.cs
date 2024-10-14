@@ -35,6 +35,7 @@ namespace PixelHero2D
             else if (other.CompareTag("Player") && !isCollected)
             {
                 isCollected = true;
+                PlayerController.instance.PlayerPrefs.ItemsCollected.Add(transform.name);
                 _ = StartCoroutine(DisappearItem());
                 ItemsManager.instance.CollectItem(transformItem);
             }
