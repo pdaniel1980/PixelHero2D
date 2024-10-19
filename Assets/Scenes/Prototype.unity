@@ -67872,6 +67872,7 @@ MonoBehaviour:
   playerStartPosition: {x: 0, y: 0, z: 0}
   playerLastPosition: {x: 0, y: 0, z: 0}
   itemsCollected: []
+  enemiesKilled: []
 --- !u!1001 &997633182
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73166,7 +73167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65b54a83d1de6db4c81f3c68b94120b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefs: {fileID: 0}
+  playerPrefs: {fileID: 990248219}
 --- !u!1001 &1703681921
 PrefabInstance:
   m_ObjectHideFlags: 0

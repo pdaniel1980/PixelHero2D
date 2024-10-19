@@ -1,6 +1,4 @@
 using Newtonsoft.Json.Linq;
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography;
 using UnityEngine;
@@ -46,9 +44,13 @@ namespace PixelHero2D
             File.WriteAllBytes(filePath, encryptedSaveGame);
         }
 
-        public void LoadPrefs()
+        public bool LoadPrefs()
         { 
             string filePath = Application.persistentDataPath + fileName;
+            
+            if (!File.Exists(filePath))
+                return false;
+
             byte[] decryptedSaveGame = File.ReadAllBytes(filePath);
             string jsonString = Decrypt(decryptedSaveGame);
 
@@ -58,8 +60,17 @@ namespace PixelHero2D
 
             if (playerPrefs.ItemsCollected.Count > 0)
             {
-                Debug.Log("SaveGame Path: " + filePath);
+                Debug.Log(filePath);
             }
+
+            return true;
+        }
+
+        public void DeletePrefs()
+        {
+            string filePath = Application.persistentDataPath + fileName;
+
+            File.Delete(filePath);
         }
 
         byte[] Encrypt(string plainText)

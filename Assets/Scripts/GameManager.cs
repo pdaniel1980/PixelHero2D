@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -29,8 +27,22 @@ namespace PixelHero2D
         private void LoadGame()
         {
             // Obtenemos las preferencias guardadas
-            saveDataGame.LoadPrefs();
+            bool success = saveDataGame.LoadPrefs();
 
+            // Establecemos las preferencias iniciales
+            if (success)
+            {
+                setPrefs();
+            }
+        }
+
+        private void ResetPlayerPrefs()
+        {
+            saveDataGame.DeletePrefs();
+        }
+
+        private void setPrefs()
+        {
             // Cargamos los valores iniciales y establecemos la posicion y direccion del player
             PlayerController.instance.transform.localPosition = PlayerController.instance.PlayerPrefs.PlayerLastPosition;
             PlayerController.instance.transform.localScale = PlayerController.instance.PlayerPrefs.PlayerDirection;
@@ -42,7 +54,7 @@ namespace PixelHero2D
             ItemsManager.instance.UnlockExtras();
 
             // Eliminamos de la escena los items recogidos
-            foreach(string item in PlayerController.instance.PlayerPrefs.ItemsCollected)
+            foreach (string item in PlayerController.instance.PlayerPrefs.ItemsCollected)
             {
                 Destroy(GameObject.Find(item));
             }
@@ -52,15 +64,6 @@ namespace PixelHero2D
             {
                 Destroy(GameObject.Find(enemy));
             }
-        }
-
-        private void ResetPlayerPrefs()
-        {
-            PlayerController.instance.PlayerPrefs.PlayerLastPosition = new Vector3 (0, 0, 0);
-            PlayerController.instance.PlayerPrefs.PlayerDirection = Vector3.right;
-            PlayerController.instance.PlayerPrefs.CoinsShining = 0;
-            PlayerController.instance.PlayerPrefs.CoinsSpining = 0;
-            PlayerController.instance.PlayerPrefs.Hearts = 0;
         }
 
         public void EndGame()
